@@ -64,7 +64,6 @@ nav a li:hover {
     top: 30vh;
     width: 100vw;
     height: 60vh;
-    background-repeat: no-repeat;
 }
 .contentContainer {
     display: flex;
@@ -77,6 +76,7 @@ nav a li:hover {
 .contentItem {
     position: relative;
     background-size: auto 100%;
+    height: 100%;
     width: 20%;
     max-width: 300px;
     min-width: 220px;
@@ -165,4 +165,137 @@ nav a li:hover {
 .footer ul li img:hover {
     opacity: 1;
     transition: .2s ease;
+}
+
+
+/*    Mobile    */
+@media screen and (max-width: 700px){
+    /* Navigation */
+    nav {
+        right: auto;
+        text-align: center;
+        top: 0;
+        font-size: 2vh;
+        width: 100%;
+        padding: 1vh 0vh;
+        background-color: white;
+        
+    }
+    nav a li {
+        color: rgb(33, 31, 33);
+    }
+    nav a li:hover {
+        color: white;
+        background-color: rgb(33, 31, 33);
+    }
+
+    /* Header */
+    .header {
+        top: 4vh;
+        height: 16vh;
+    }
+    .imgContainer img {
+        width: auto;
+        height: 6vh;
+    }
+    .headerText h1 {
+        font-size: 2vh;
+    }
+    
+
+    /* Content */
+    .content {
+        top: 22vh;
+        height: 70vh;
+    }
+    .contentContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+    .contentItem {
+        width: 100vw;
+        min-width: auto;
+        max-width: 100vw;
+        margin: 0;
+    }
+    .imgText {
+        position: absolute;
+        display: table;
+        width: 100%;
+        height: 22%;
+        background-color: rgb(255, 255, 255, .1);
+        z-index: 2;
+    }
+    .imgText h3 {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        font-weight: 200;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }
+    .listHead {
+        font-weight: 600;
+    }
+    .serverText {
+        position: absolute;
+        display: table;
+        top: 22%;
+        height: 75%;
+        width: 100%;
+        z-index: 2;
+    }
+    .textContainer {
+        display: table-cell;
+        vertical-align: middle;
+        font-weight: 200;
+    }
+    .textContainer ul {
+        text-align: center;
+        list-style: none;
+    }
+    .listItem{
+        line-height: 20px;
+        margin: 0px 20px;
+        opacity: 1;
+        transform: translateY(0px);
+        transition: 0s;
+    }
+    .slider {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(33, 31, 33, 0.85);
+        transition: .2s ease;
+        z-index: 1;
+    }
+
+    /* Footer */
+    .footer {
+        bottom: 2vh;
+        height: 4vh;
+        width: 100vw;
+        text-align: center;
+        left: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .footer ul li {
+        margin: 0 20px;
+    }
+    .footer ul li img {
+        height: 4vh;
+        width: auto;
+    }
+}
+
+@media screen and (max-height: 450px){
+    .imgContainer img {
+        width: auto;
+        height: 10vh;
+    }
+    .headerText h1 {
+        font-size: 15px;
+        font-weight: 600;
+    }
 }

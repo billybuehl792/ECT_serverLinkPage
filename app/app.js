@@ -4,13 +4,11 @@ function dropDown(){
     contentItems.forEach(item => {
         item.addEventListener('mouseover', () => {
             var slider = item.querySelector('.slider');
-
             slider.classList.add('sliderActive');
             textAlter(item, false);
         });
         item.addEventListener('mouseout', () => {
             var slider = item.querySelector('.slider');
-
             slider.classList.remove('sliderActive');
             textAlter(item, true)
         });
@@ -19,7 +17,6 @@ function dropDown(){
 
 function textAlter(item, mode){
     var listItems = item.querySelectorAll('.serverText .textContainer .listItem');
-    
     if (mode){
         listItems.forEach(listElem => {
             listElem.classList.remove('listOn');
@@ -30,7 +27,6 @@ function textAlter(item, mode){
         });
     }
 }
-
 
 const app = () => {
     dropDown();
